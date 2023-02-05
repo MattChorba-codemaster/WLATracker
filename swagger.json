@@ -5,7 +5,7 @@
       "description": "WLA Tracker API",
       "version": "1.0.0"
     },
-    "host": "https://wlatracker2.onrender.com",
+    "host": "wlatracker2.onrender.com",
     "basePath": "/",
     "schemes": [
       "https"

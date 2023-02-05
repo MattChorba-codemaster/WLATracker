@@ -5,7 +5,7 @@ const swaggerAutogen = require('swagger-autogen')();
 //     title: 'My API',
 //     description: 'WLA Tracker API'
 //   },
-//   host: 'https://wlatracker.onrender.com',
+//   host: 'https://wlatracker2.onrender.com',
 //   schemes: ['https']
 // };
 

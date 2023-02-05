@@ -1,13 +1,13 @@
 GET http://localhost:8080/students HTTP/1.1
 
 # GET All Students 
-# GET https://wlatracker.onrender.com/students
+# GET https://wlatracker2.onrender.com/students
 
 # # GET Student by ID 
-# GET https://wlatracker.onrender.com/students/63c34c6972c9bcf6024e1109
+# GET https://wlatracker2.onrender.com/students/63c34c6972c9bcf6024e1109
 
 # CREATE Student
-# POST https://wlatracker.onrender.com/students HTTP/1.1 Content-Type: application/json
+# POST https://wlatracker2.onrender.com/students HTTP/1.1 Content-Type: application/json
 
 # {
 #     "firstName":"Matt",
@@ -18,7 +18,7 @@ GET http://localhost:8080/students HTTP/1.1
 # }
 
 # # # # PUT Student
-# PUT https://wlatracker.onrender.com/students/63c34c6972c9bcf6024e1109 HTTP/1.1 
+# PUT https://wlatracker2.onrender.com/students/63c34c6972c9bcf6024e1109 HTTP/1.1 
 # Content-Type: application/json
 
 # {
@@ -30,4 +30,4 @@ GET http://localhost:8080/students HTTP/1.1
 # }
 
 # # DELETE Student
-# DELETE https://wlatracker.onrender.com/students/63cca7fcaaa23af10c244684 HTTP/1.1
+# DELETE https://wlatracker2.onrender.com/students/63cca7fcaaa23af10c244684 HTTP/1.1

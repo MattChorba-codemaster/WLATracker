@@ -1,0 +1,32 @@
+{
+  "name": "wlatrackercode",
+  "version": "1.0.0",
+  "description": "code for cse 341 W05 Personal Lesson",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js",
+    "start": "server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattChorba-codemaster/CSE-341"
+  },
+  "author": "Matt Chorba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattChorba-codemaster/CSE-341/issues"
+  },
+  "homepage": "https://github.com/MattChorba-codemaster/CSE-341",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.3",
+    "mongodb": "^4.13.0",
+    "swagger-ui-express": "^4.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "swagger-autogen": "^2.22.0"
+  }
+}

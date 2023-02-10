@@ -1,13 +1,13 @@
 const swaggerAutogen = require('swagger-autogen')();
 
-// const doc = {
-//   info: {
-//     title: 'My API',
-//     description: 'WLA Tracker API'
-//   },
-//   host: 'https://wlatracker2.onrender.com',
-//   schemes: ['https']
-// };
+const doc = {
+  info: {
+    title: 'My API',
+    description: 'WLA Tracker API'
+  },
+  host: 'wlatracker2.onrender.com',
+  schemes: ['https']
+};
 
 const outputFile = './swagger.json';
 const endpointsFiles = ['./routes/index.js'];

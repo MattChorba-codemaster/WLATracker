@@ -1,20 +1,37 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAll = async (req, res) => {
-  const result = await mongodb.getDb().db().collection('Students').find();
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists);
-  });
+const getAll = (req, res) => {
+  mongodb
+    .getDb()
+    .db()
+    .collection('Students')
+    .find()
+    .toArray((err, lists) => {
+      if (err) {
+        res.status(400).json({ message: err });
+      }
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists);
+    });
 };
 
-const getSingle = async (req, res) => {
+const getSingle = (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid student id to find a student.');
+  }
   const userId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db().collection('Students').find({ _id: userId });
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists[0]);
+  mongodb
+    .getDb()
+    .db()
+    .collection('Students')
+    .find({ _id: userId })
+    .toArray((err, result) => {
+      if (err) {
+        res.status(400).json({ message: err });
+      }
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(result[0]);
   });
 };
 
@@ -35,6 +52,9 @@ const createStudent = async (req, res) => {
 };
 
 const updateStudent = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid student id to update a student.');
+  }
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const student = {
@@ -58,6 +78,9 @@ const updateStudent = async (req, res) => {
 };
 
 const deleteStudent = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid student id to delete a student.');
+  }
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db().collection('Students').remove({ _id: userId }, true);
   console.log(response);

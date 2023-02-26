@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
-const cors = require('cors');
+// require('dotenv').config({ path: './.env' });
 
 const port = process.env.PORT || 8080;
 const app = express();

@@ -10,7 +10,7 @@ const doc = {
   securityDefinitions: {
     oAuthSample: {
       type: 'oauth2',
-      authorizationUrl: 'wlatracker2.onrender.com/login',
+      authorizationUrl: 'https://wlatracker2.onrender.com/login',
       flow: 'authorizationCode'
     }
   }

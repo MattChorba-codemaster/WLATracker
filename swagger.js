@@ -6,7 +6,14 @@ const doc = {
     description: 'WLA Tracker API'
   },
   host: 'wlatracker2.onrender.com',
-  schemes: ['https']
+  schemes: ['https'],
+  securityDefinitions: {
+    oAuthSample: {
+      type: 'oauth2',
+      authorizationUrl: 'wlatracker2.onrender.com/login',
+      flow: 'implicit'
+    }
+  }
 };
 
 const outputFile = './swagger.json';

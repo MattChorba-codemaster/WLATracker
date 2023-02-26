@@ -11,7 +11,7 @@ const doc = {
     oAuthSample: {
       type: 'oauth2',
       authorizationUrl: 'wlatracker2.onrender.com/login',
-      flow: 'implicit'
+      flow: 'authorizationCode'
     }
   }
 };
